@@ -172,9 +172,110 @@ function ProductDetails() {
               </button>
             </div>
             <div className='my-3 bg-red-100 p-3'>
-              
+              <p className='text-semibold'>Estimated delivery time 14-30 days</p>
+              <p className='text-semibold'>!8 months warranty at Genuine Warranty Center</p>
+              <p className='text-semibold'>Use coupon to get extra $23 off (only this product)</p>
             </div>
           </div>
+        </div>
+
+
+        {/* Add Review */}
+
+        <div className='px=[8%] lg:px-[10%] py-[50px]'>
+          <div className='px-[2%] pt-[20px] border rounded-2xl shadow-lg'>
+            <h2 className='text-2xl font-bold mb-6 text-gray-800 font-bricolage'>Add a Review</h2>
+
+            <form className='space-y-5 '>
+              <div>
+                <label className='block mb-1 text-sm font-semibold text-gray-700'>Your Name</label>
+                <input 
+                  type="text"
+                  placeholder='Enter Your Name' 
+                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400'
+                  />
+              </div>
+              <div>
+                <label className='block mb-1 text-sm font-semibold text-gray-700'>Rating</label>
+                <select 
+                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400'
+                  defaultValue=''
+                >
+                  <option value="" disabled>Select Rating</option>
+                  <option value="5">⭐⭐⭐⭐⭐{5}</option>
+                  <option value="4">⭐⭐⭐⭐{4}</option>
+                  <option value="3">⭐⭐⭐{3}</option>
+                  <option value="2">⭐⭐{2}</option>
+                  <option value="1">⭐{1}</option>
+                </select>
+              </div>
+              <div>
+                <label className='block mb-1 text-sm font-semibold text-gray-700'>Your Review</label>
+                <textarea 
+                  rows='4'
+                  placeholder='Enter Your Review' 
+                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400'
+                  />
+              </div>
+              <button type='submit' className='bg-yellow-400 hover:bg-red-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300'>
+                Submit Review
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Brands */}
+        <div className='px-[8%] lg:px-[12%] py-[50px]'>
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={20}
+            loop={true}
+            autoplay={{delay : 2000}}
+            breakpoints={{
+              1399: {slidesPerView : 5},
+              1199: {slidesPerView : 5},
+              991: {slidesPerView : 4},
+              575: {slidesPerView : 3},
+              0: {slidesPerView : 3},
+            }}
+            modules={[Autoplay]}
+          >
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand1} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand2} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand3} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand4} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand5} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand6} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex items-center justify-center h-20'>
+                <img src={brand7} className='object-contain invert-[0.3] hover:invert-[0] cursor-pointer transition' />
+              </div>
+            </SwiperSlide>
+          </Swiper> 
         </div>
     </>
   );
