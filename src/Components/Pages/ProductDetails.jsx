@@ -159,7 +159,7 @@ function ProductDetails() {
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis numquam?</p>
             <div className='flex gap-3'>
               <button
-                onClick={handleAddToWishlist}
+                onClick={handleAddToCart}
                 className='mt-4 px-6 rounded bg-red-500 text-white hover:bg-yellow-500 transition'
               >
                 Add To Cart
